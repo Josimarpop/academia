@@ -1,0 +1,31 @@
+<h1>Listing modalidades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Calorias Perdidas</th>
+      <th>Valor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @modalidades.each do |modalidade| %>
+      <tr>
+        <td><%= modalidade.nome %></td>
+        <td><%= modalidade.caloriasPerdidas %></td>
+        <td><%= modalidade.valor %></td>
+        <td><%= link_to 'Show', modalidade %></td>
+        <td><%= link_to 'Edit', edit_modalidade_path(modalidade) %></td>
+        <td><%= link_to 'Excluir', modalidade, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Modalidade', new_modalidade_path %>
