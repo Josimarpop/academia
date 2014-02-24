@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140224191056) do
+ActiveRecord::Schema.define(version: 20140224192211) do
 
   create_table "alunos", force: true do |t|
     t.string   "nome"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20140224191056) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "horas", force: true do |t|
+    t.string   "horario"
+    t.integer  "aluno_id"
+    t.integer  "professor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "horas", ["aluno_id"], name: "index_horas_on_aluno_id"
+  add_index "horas", ["professor_id"], name: "index_horas_on_professor_id"
 
   create_table "modalidades", force: true do |t|
     t.string   "nome"

@@ -1,0 +1,6 @@
+= semantic_form_for [@hora] do |form| 
+  = form.input :aluno, :member_label => :nome, :label => 'Aluno'
+  = form.input :professor, :member_label => :nome, :label => 'Professor'
+
+  = form.input :horario, :label => 'Horário'
+  = form.submit 'Salvar'

@@ -1,4 +1,6 @@
 Academia::Application.routes.draw do
+  resources :horas
+
   resources :modalidades
 
   resources :professors

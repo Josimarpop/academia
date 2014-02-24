@@ -1,0 +1,31 @@
+<h1>Listing horas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Horário</th>
+      <th>Aluno</th>
+      <th>Professor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @horas.each do |hora| %>
+      <tr>
+        <td><%= hora.horario %></td>
+        <td><%= hora.aluno.nome %></td>
+        <td><%= hora.professor.nome %></td>
+        <td><%= link_to 'Show', hora %></td>
+        <td><%= link_to 'Edit', edit_hora_path(hora) %></td>
+        <td><%= link_to 'Excluir', hora, method: :delete, data: { confirm: Voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hora', new_hora_path %>
