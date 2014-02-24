@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140224193858) do
+ActiveRecord::Schema.define(version: 20140224225049) do
 
   create_table "alunos", force: true do |t|
     t.string   "nome"
@@ -22,6 +22,27 @@ ActiveRecord::Schema.define(version: 20140224193858) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "avaliacaofisicas", force: true do |t|
+    t.string   "peso"
+    t.string   "altura"
+    t.string   "imc"
+    t.string   "pressaoArterial"
+    t.string   "peito"
+    t.string   "cintura"
+    t.string   "gluteo"
+    t.string   "bracoDireito"
+    t.string   "bracoEsquerdo"
+    t.string   "coxaDireita"
+    t.string   "coxaEsquerda"
+    t.integer  "aluno_id"
+    t.integer  "professor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "avaliacaofisicas", ["aluno_id"], name: "index_avaliacaofisicas_on_aluno_id"
+  add_index "avaliacaofisicas", ["professor_id"], name: "index_avaliacaofisicas_on_professor_id"
 
   create_table "horas", force: true do |t|
     t.string   "horario"

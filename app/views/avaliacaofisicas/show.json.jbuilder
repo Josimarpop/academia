@@ -1,0 +1,1 @@
+json.extract! @avaliacaofisica, :id, :peso, :altura, :imc, :pressaoArterial, :peito, :cintura, :gluteo, :bracoDireito, :bracoEsquerdo, :coxaDireita, :coxaEsquerda, :aluno_id, :professor_id, :created_at, :updated_at

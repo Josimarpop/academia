@@ -1,0 +1,69 @@
+<%= form_for(@avaliacaofisica) do |f| %>
+  <% if @avaliacaofisica.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@avaliacaofisica.errors.count, "error") %> prohibited this avaliacaofisica from being saved:</h2>
+
+      <ul>
+      <% @avaliacaofisica.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :peso %><br>
+    <%= f.text_field :peso %>
+  </div>
+  <div class="field">
+    <%= f.label :altura %><br>
+    <%= f.text_field :altura %>
+  </div>
+  <div class="field">
+    <%= f.label :imc %><br>
+    <%= f.text_field :imc %>
+  </div>
+  <div class="field">
+    <%= f.label :pressaoArterial %><br>
+    <%= f.text_field :pressaoArterial %>
+  </div>
+  <div class="field">
+    <%= f.label :peito %><br>
+    <%= f.text_field :peito %>
+  </div>
+  <div class="field">
+    <%= f.label :cintura %><br>
+    <%= f.text_field :cintura %>
+  </div>
+  <div class="field">
+    <%= f.label :gluteo %><br>
+    <%= f.text_field :gluteo %>
+  </div>
+  <div class="field">
+    <%= f.label :bracoDireito %><br>
+    <%= f.text_field :bracoDireito %>
+  </div>
+  <div class="field">
+    <%= f.label :bracoEsquerdo %><br>
+    <%= f.text_field :bracoEsquerdo %>
+  </div>
+  <div class="field">
+    <%= f.label :coxaDireita %><br>
+    <%= f.text_field :coxaDireita %>
+  </div>
+  <div class="field">
+    <%= f.label :coxaEsquerda %><br>
+    <%= f.text_field :coxaEsquerda %>
+  </div>
+  <div class="field">
+    <%= f.label :aluno_id %><br>
+    <%= f.text_field :aluno_id %>
+  </div>
+  <div class="field">
+    <%= f.label :professor_id %><br>
+    <%= f.text_field :professor_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

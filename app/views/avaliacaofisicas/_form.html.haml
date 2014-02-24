@@ -1,0 +1,16 @@
+= semantic_form_for [@avaliacaofisica] do |form|
+
+  = form.input :peso, :label => 'Peso'
+  = form.input :altura, :label => 'Altura'
+  = form.input :imc, :label => 'IMC'
+  = form.input :pressaoArterial, :label => 'Pressao Arterial'
+  = form.input :peito, :as => :string, :label => 'Peito'
+  = form.input :cintura, :label => 'Cintura'
+  = form.input :gluteo, :label => 'Gluteo'
+  = form.input :bracoDireito, :label => 'Braco Direito'
+  = form.input :bracoEsquerdo, :label => 'Braco Esquerdo'
+  = form.input :coxaDireita, :label => 'Coxa Direita'
+  = form.input :coxaEsquerda, :label => 'Coxa Esquerda'
+  = form.input :aluno, :member_label => :nome, :label => 'Aluno'
+  = form.input :professor, :member_label => :nome, :label => 'Professor'
+  = form.submit 'Salvar'

@@ -1,0 +1,51 @@
+<h1>Listing avaliacaofisicas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Peso</th>
+      <th>Altura</th>
+      <th>IMC</th>
+      <th>Pressao Arterial</th>
+      <th>Peito</th>
+      <th>Cintura</th>
+      <th>Gluteo</th>
+      <th>Braco Direito</th>
+      <th>Braco Esquerdo</th>
+      <th>Coxa Direita</th>
+      <th>Coxa Esquerda</th>
+      <th>Aluno</th>
+      <th>Professor</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @avaliacaofisicas.each do |avaliacaofisica| %>
+      <tr>
+        <td><%= avaliacaofisica.peso %></td>
+        <td><%= avaliacaofisica.altura %></td>
+        <td><%= avaliacaofisica.imc %></td>
+        <td><%= avaliacaofisica.pressaoArterial %></td>
+        <td><%= avaliacaofisica.peito %></td>
+        <td><%= avaliacaofisica.cintura %></td>
+        <td><%= avaliacaofisica.gluteo %></td>
+        <td><%= avaliacaofisica.bracoDireito %></td>
+        <td><%= avaliacaofisica.bracoEsquerdo %></td>
+        <td><%= avaliacaofisica.coxaDireita %></td>
+        <td><%= avaliacaofisica.coxaEsquerda %></td>
+        <td><%= avaliacaofisica.aluno %></td>
+        <td><%= avaliacaofisica.professor %></td>
+        <td><%= link_to 'Show', avaliacaofisica %></td>
+        <td><%= link_to 'Edit', edit_avaliacaofisica_path(avaliacaofisica) %></td>
+        <td><%= link_to 'Destroy', avaliacaofisica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Avaliacaofisica', new_avaliacaofisica_path %>

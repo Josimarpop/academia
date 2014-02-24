@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @avaliacaofisica.peso %>
+</p>
+
+<p>
+  <strong>Altura:</strong>
+  <%= @avaliacaofisica.altura %>
+</p>
+
+<p>
+  <strong>IMC:</strong>
+  <%= @avaliacaofisica.imc %>
+</p>
+
+<p>
+  <strong>Pressao Arterial:</strong>
+  <%= @avaliacaofisica.pressaoArterial %>
+</p>
+
+<p>
+  <strong>Peito:</strong>
+  <%= @avaliacaofisica.peito %>
+</p>
+
+<p>
+  <strong>Cintura:</strong>
+  <%= @avaliacaofisica.cintura %>
+</p>
+
+<p>
+  <strong>Gluteo:</strong>
+  <%= @avaliacaofisica.gluteo %>
+</p>
+
+<p>
+  <strong>Braco Direito:</strong>
+  <%= @avaliacaofisica.bracoDireito %>
+</p>
+
+<p>
+  <strong>Braco Esquerdo:</strong>
+  <%= @avaliacaofisica.bracoEsquerdo %>
+</p>
+
+<p>
+  <strong>Coxa Direita:</strong>
+  <%= @avaliacaofisica.coxaDireita %>
+</p>
+
+<p>
+  <strong>Coxa Esquerda:</strong>
+  <%= @avaliacaofisica.coxaEsquerda %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @avaliacaofisica.aluno %>
+</p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @avaliacaofisica.professor %>
+</p>
+
+<%= link_to 'Edit', edit_avaliacaofisica_path(@avaliacaofisica) %> |
+<%= link_to 'Back', avaliacaofisicas_path %>
