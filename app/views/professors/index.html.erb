@@ -1,0 +1,37 @@
+<h1>Listing professors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Endereço</th>
+      <th>Bairro</th>
+      <th>Telefone</th>
+      <th>E-mail</th>
+      <th>Salário</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professors.each do |professor| %>
+      <tr>
+        <td><%= professor.nome %></td>
+        <td><%= professor.endereco %></td>
+        <td><%= professor.bairro %></td>
+        <td><%= professor.telefone %></td>
+        <td><%= professor.email %></td>
+        <td><%= professor.salario %></td>
+        <td><%= link_to 'Show', professor %></td>
+        <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
+        <td><%= link_to 'Excluir', professor, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professor', new_professor_path %>

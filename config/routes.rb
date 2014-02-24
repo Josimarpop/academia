@@ -1,4 +1,6 @@
 Academia::Application.routes.draw do
+  resources :professors
+
   resources :alunos
 
   # The priority is based upon order of creation: first created -> highest priority.
