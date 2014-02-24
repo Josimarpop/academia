@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Serie:</strong>
+  <%= @treino.serie %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @treino.data %>
+</p>
+
+<p>
+  <strong>Aluno:</strong>
+  <%= @treino.aluno.nome %>
+</p>
+
+<p>
+  <strong>Modalidade:</strong>
+  <%= @treino.modalidade.nome %>
+</p>
+
+<%= link_to 'Edit', edit_treino_path(@treino) %> |
+<%= link_to 'Back', treinos_path %>

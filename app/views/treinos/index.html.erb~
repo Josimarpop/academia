@@ -1,0 +1,33 @@
+<h1>Listing treinos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Série</th>
+      <th>Data</th>
+      <th>Aluno</th>
+      <th>Modalidade</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @treinos.each do |treino| %>
+      <tr>
+        <td><%= treino.serie %></td>
+        <td><%= treino.data %></td>
+        <td><%= treino.aluno.nome %></td>
+        <td><%= treino.modalidade.nome %></td>
+        <td><%= link_to 'Show', treino %></td>
+        <td><%= link_to 'Edit', edit_treino_path(treino) %></td>
+        <td><%= link_to 'Excluir', treino, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Treino', new_treino_path %>
